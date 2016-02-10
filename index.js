@@ -6,6 +6,9 @@ module.exports = function (el) {
 
   if (script.length === 0) return null;
 
+  // get only first script
+  script = $(script.get(0));
+
   var data = $.parseJSON(script.html());
   script.remove();
 
